@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var span = document.getElementsByClassName("close")[0];
     span.onclick = function() { 
         modal.style.display = "none";
-    }
-
+    };
+    
     modal.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -40,7 +40,21 @@ document.addEventListener("DOMContentLoaded", function() {
     nextButton.onclick = function() {
         currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
         modalImg.src = images[currentIndex].src;
-    }
+    };
+
+    document.addEventListener("keydown", function (event) {
+        if (modal.style.display === "flex") {
+          if (event.key === "ArrowLeft") {
+            currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+            modalImg.src = images[currentIndex].src;
+          } else if (event.key === "ArrowRight") {
+            currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+            modalImg.src = images[currentIndex].src;
+          } else if (event.key === "Escape") {
+            modal.style.display = "none";
+          }
+        }
+      });
 });
 
 /*========== menu icon navbar ==========*/

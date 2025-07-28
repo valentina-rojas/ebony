@@ -165,6 +165,7 @@ section {
     color: var(--white-color);
 }
 
+
 .btn {
     display: inline-block;
     padding: 1.2rem 2.8rem;
@@ -936,11 +937,13 @@ span {
 img {
     border-radius: 20px;
 }
+
+
 /* Modal styling */
 .modal {
     display: none; 
     position: fixed; 
-    z-index: 1; 
+    z-index: 1000; 
     left: 0;
     top: 0;
     width: 100%;
@@ -986,13 +989,36 @@ img {
     right: 10px;
 }
 
-img.clickable {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Mantiene la proporción, cubriendo el área del contenedor */
-  
-    max-width: 500px; /* Ajusta según tus necesidades */
-    max-height: 300px; /* Ajusta según tus necesidades */
- 
+
+/* Centrar el contenedor y las imágenes */
+#image-container {
+    display: flex; /* Flexbox para alineación */
+    flex-wrap: wrap; /* Permitir que las imágenes se ajusten en varias filas */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 15px; /* Espaciado entre imágenes */
+    padding: 20px; /* Espaciado interno opcional */
+    margin: 0 auto; /* Centrar el contenedor en el eje horizontal */
+    max-width: 1200px; /* Ajustar el ancho máximo del contenedor */
 }
 
+img.clickable {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  aspect-ratio: 4 / 3; /* Asegura proporción consistente */
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  image-rendering: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  box-sizing: border-box;
+}
+
+/* Efecto hover */
+img.clickable:hover {
+    transform: scale(1.05); /* Aumentar tamaño al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Intensificar sombra */
+}

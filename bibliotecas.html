@@ -1,36 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="es">
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ebony Muebles</title>
+    <title>Bibliotecas - Ebony Muebles</title>
+
+    <!-- swiper css (si lo usás en otras secciones) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!-- box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- custom css -->
     <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+  </head> 
+
+  <body>
     <!-- header design -->
     <header class="header">
-        <a href="#" class="logo">Bibliotecas</a>
+      <a href="index.html" class="logo">Ebony Muebles</a>
+
+      <nav class="navbar">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">Empresa</a>
+        <a href="index.html#portfolio" class="active">Productos</a>
+        <a href="index.html#contact">Contacto</a>
+      </nav>
+
+      <div class="bx bx-moon" id="darkMode-icon"></div>
+      <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
+    <!-- galería de imágenes -->
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading"><span>Bibliotecas</span></h2>
+      <div id="image-container" class="portfolio-container"></div>
+    </section>
 
-
-    <!-- images -->
-    <img src="images/biblotecas/bibloteca (1).jpg" alt="" class="clickable" />
-    <img src="images/biblotecas/bibloteca (2).jpg" alt="" class="clickable" />
-    <img src="images/biblotecas/bibloteca (3).jpg" alt="" class="clickable" />
-    <img src="images/biblotecas/bibloteca (4).jpg" alt="" class="clickable" />
-    <img src="images/biblotecas/bibloteca (5).jpg" alt="" class="clickable" />
     <!-- modal -->
-    <div id="myModal" class="modal" style="display: none;">
-        <span class="close">&times;</span>
-        <button class="nav-button prev">&#10094;</button>
-        <button class="nav-button next">&#10095;</button>
-        <img class="modal-content" id="img01">
+    <div id="myModal" class="modal" style="display: none">
+      <span class="close">&times;</span>
+      <button class="nav-button prev">&#10094;</button>
+      <button class="nav-button next">&#10095;</button>
+      <img class="modal-content" id="img01" />
     </div>
 
-
     <!-- scripts -->
+    <script>
+      const container = document.getElementById("image-container");
+      const imageCount = 15;
+      const imagePath = "images/biblotecas/bibloteca";
+
+      for (let i = 1; i <= imageCount; i++) {
+        const img = document.createElement("img");
+        img.src = `${imagePath} (${i}).png`;
+        img.alt = "";
+        img.className = "clickable";
+        container.appendChild(img);
+      }
+    </script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

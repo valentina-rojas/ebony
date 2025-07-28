@@ -40,7 +40,7 @@
 
     <!-- galería de imágenes -->
     <section class="portfolio" id="portfolio">
-      <h2 class="heading"><span>Espejos</span></h2>
+      <h2 class="heading"><span>Percheros</span></h2>
       <div id="image-container" class="portfolio-container"></div>
     </section>
 
@@ -56,11 +56,11 @@
     <script>
       const container = document.getElementById("image-container");
       const imageCount = 15;
-      const imagePath = "images/espejos/espejo";
+      const imagePath = "images/percheros/perchero";
 
       for (let i = 1; i <= imageCount; i++) {
         const img = document.createElement("img");
-        img.src = `${imagePath} (${i}).jpg`;
+        img.src = `${imagePath} (${i}).png`;
         img.alt = "";
         img.className = "clickable";
         container.appendChild(img);
