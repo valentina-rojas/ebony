@@ -234,7 +234,7 @@ section {
   .home-content h1,
   .home-content h3,
   .home-content p {
-    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    text-shadow: 6px 2px 6px rgba(0,0,0,0.7);
   }
 }
 
@@ -498,23 +498,15 @@ span {
         right: 0;
     }
 
-    
 }
 
 @media (max-width: 1100px) {
 
-  .home {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 3rem;
-  }
 
   .home-img {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
   }
 
   .home-img img {
@@ -539,18 +531,12 @@ span {
         padding: 10rem 3% 2rem;
     }
 
-  .home {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 3rem;
-  }
-
+ 
   .home-img {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+
   }
 
   .home-img img {
@@ -567,33 +553,6 @@ span {
 }
 
 @media (max-width: 991px) {
-
-    .navbar a:nth-child(1) {
-        color: var(--main-color);
-    }
-
-    .navbar a.active::before {
-        background: var(--main-color);
-        opacity: .7;
-    }
-
-    .home .home-content {
-        max-width: 50rem;
-    }
-
- .home {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 3rem;
-  }
-
-  .home-img {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-  }
 
   .home-img img {
     max-width: 90vw;
@@ -612,9 +571,6 @@ span {
 }
 
 @media (max-width: 896px) {
-    .navbar a:nth-child(2) {
-        color: var(--main-color);
-    }
   
 }
 
@@ -623,15 +579,17 @@ span {
 }
 
 @media (max-width: 780px) {
-    .navbar a:nth-child(2) {
-        color: var(--white-color);
-    }
+
 }
 
 @media (max-width: 768px) {
     #menu-icon {
         display: block;
     }
+
+      .header {
+    background: var(--bg-color); 
+  }
 
     #darkMode-icon {
         position: absolute;
@@ -679,10 +637,10 @@ span {
 
 
     .home {
-    padding: 10rem 3% 23rem;
+    padding: 18rem 3% 23rem;
     flex-direction: column;
     align-items: center;
-    margin-top: 10rem;
+  
    }
 
   .home-img img {
@@ -721,6 +679,14 @@ span {
     .about-img img {
         width: 90vw;
         margin-top: -2rem;
+    }
+
+    .home-content h3 {
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .home-content h1 {
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
     }
 
     .home-img img {
@@ -772,7 +738,7 @@ span {
     }
 }
 img {
-    border-radius: 20px;
+    border-radius: 0px;
 }
 
 
