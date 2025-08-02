@@ -870,3 +870,72 @@ img.clickable:hover {
 .dropdown:hover .dropbtn {
   color: #ff9900; /* o cualquier color de acento */
 }
+
+
+/* Estilo normal (desktop) - funciona con hover */
+.dropdown-content {
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown-content {
+    display: block !important;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding-left: 15px;
+    margin-top: 5px; /* un poco de separación */
+  }
+
+  .dropdown-content a {
+    padding: 0px 0;       /* menos espacio vertical */
+    font-size: 1.5rem;      /* más grande */
+    line-height: 1.2;     /* menos aire */
+    display: block;
+  }
+
+  /* Opcional: un pequeño hover visual */
+  .dropdown-content a:hover {
+    color: #c0392b;       /* tono rojo suave */
+  }
+}
+
+
+.contact-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-info p {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+.contact-info i {
+  color: #8b5e3c; /* color rústico */
+  font-size: 2rem;
+  margin-right: 8px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-info a:hover {
+  color: #d1a774;
+}
+
+
+.footer-text p {
+  margin: 3px 0;
+}
+
+.footer-text p:last-child {
+  font-size: 0.85em;
+  color: #fff; /* gris suave */
+}
