@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -69,16 +69,29 @@
     <!-- scripts -->
     <script>
       const container = document.getElementById("image-container");
-      const imageCount = 6;
       const imagePath = "images/living/living";
 
-      for (let i = 1; i <= imageCount; i++) {
+      let i = 1;
+
+      function cargarImagen() {
         const img = document.createElement("img");
+
         img.src = `${imagePath} (${i}).png`;
         img.alt = "";
         img.className = "clickable";
-        container.appendChild(img);
+
+        img.onload = function () {
+          container.appendChild(img);
+          i++;
+          cargarImagen();
+        };
+
+        img.onerror = function () {
+          console.log("No hay más imágenes.");
+        };
       }
+
+      cargarImagen();
     </script>
 
     <script src="https://unpkg.com/scrollreveal"></script>
