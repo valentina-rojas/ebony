@@ -67,32 +67,18 @@
     </div>
 
     <!-- scripts -->
-
     <script>
       const container = document.getElementById("image-container");
+      const imageCount = 44;
       const imagePath = "images/biblotecas/bibloteca";
 
-      let i = 1;
-
-      function cargarImagen() {
+      for (let i = 1; i <= imageCount; i++) {
         const img = document.createElement("img");
-
         img.src = `${imagePath} (${i}).png`;
         img.alt = "";
         img.className = "clickable";
-
-        img.onload = function () {
-          container.appendChild(img);
-          i++;
-          cargarImagen();
-        };
-
-        img.onerror = function () {
-          console.log("No hay más imágenes.");
-        };
+        container.appendChild(img);
       }
-
-      cargarImagen();
     </script>
 
     <script src="https://unpkg.com/scrollreveal"></script>
